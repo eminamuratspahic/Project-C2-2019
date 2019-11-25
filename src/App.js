@@ -11,6 +11,7 @@ function App() {
           Edit <code>src/App.js</code> react... ...
         </p>
         <h1> Hej </h1>
+        <h2>Hej, emina här</h2>
         <a
           className="App-link"
           href="https://reactjs.org"
