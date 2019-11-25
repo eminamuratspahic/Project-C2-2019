@@ -14,6 +14,7 @@ function App() {
         <h2>Hej, emina här</h2>
         <p>hej klaudia här </p>
         <p> Kine är också här </p>
+        <p>TJO</p>
         <a
           className="App-link"
           href="https://reactjs.org"
