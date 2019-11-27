@@ -28,21 +28,28 @@ class MyChart extends Component {
       {name: 'Cement', value: co2["Cement"]},
       {name: 'Gas Flaring', value: co2["Gas Flaring"]}
 ];
+const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+
     return ( 
       <div style={{width:"350px",height:"400px",float:"left"}}>
       <input type="text" placeholder="Årtal..." onKeyDown={e=> this.handleYear(e)}></input>
             <BarChart width={600} 
       height={300} 
       data={dataBarChart}
-      
+      dataKey="value"
       margin={{top: 5, right: 30, left: 20, bottom: 5}}>
  <CartesianGrid strokeDasharray="3 3"/>
  <XAxis dataKey="name"/>
+
  <YAxis/>
  <Tooltip/>
  <Legend />
- <Bar dataKey="pv" fill="#8884d8" />
- <Bar dataKey="uv" fill="#82ca9d" />
+ <Bar dataKey="value">
+  <Cell fill={COLORS[0]}/> 
+           <Cell fill={COLORS[1]}/>
+           <Cell fill={COLORS[2]}/>
+           <Cell fill= {COLORS[3]}/>
+ </Bar>
 </BarChart>
 </div>
      );
